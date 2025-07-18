@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px_12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 600;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
+        }
+        button {
+            width: 100%;
+            padding: 12px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            background-color: #d63384; /* Warna baru yang lebih cocok */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #b02a6c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Buat Undangan Digital Anda</h2>
+        
+        <form action="backend.php" method="POST" target="_blank">
+            <div class="form-group">
+                <label for="nama_pria">Nama Pengantin Pria</label>
+                <input type="text" id="nama_pria" name="nama_pria" placeholder="Contoh: Yusuf Rochman" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="nama_wanita">Nama Pengantin Wanita</label>
+                <input type="text" id="nama_wanita" name="nama_wanita" placeholder="Contoh: Jessica Iskandar" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hari_tanggal">Hari & Tanggal</label>
+                <input type="text" id="hari_tanggal" name="hari_tanggal" placeholder="Contoh: Minggu, 20 Juli 2025" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lokasi">Lokasi Pernikahan</label>
+                <input type="text" id="lokasi" name="lokasi" placeholder="Contoh: Hotel Mercure" required>
+            </div>
+            
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+
+</body>
+</html>
